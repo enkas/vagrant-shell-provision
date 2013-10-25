@@ -8,11 +8,11 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
-  config.vm.provision "shell", path: "./executors/epel.sh"
-  config.vm.provision "shell", path: "./executors/dev-tools.sh"
-  config.vm.provision "shell", path: "./executors/php53.sh"
-  config.vm.provision "shell", path: "./executors/php-composer.sh"
-  config.vm.provision "shell", path: "./executors/apache.sh"
-  config.vm.provision "shell", path: "./executors/mysql.sh"
+  config.vm.provision "shell", path: "./executor/epel.sh"
+  config.vm.provision "shell", path: "./executor/dev-tools.sh"
+  config.vm.provision "shell", path: "./executor/php53.sh"
+  config.vm.provision "shell", path: "./executor/php-composer.sh"
+  config.vm.provision "shell", path: "./executor/apache.sh"
+  config.vm.provision "shell", path: "./executor/mysql.sh"
 
 end

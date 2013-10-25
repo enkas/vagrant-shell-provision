@@ -9,8 +9,8 @@ echo "-> Prepare"
     fi
     cd /tmp
 
-    echo "--> Install dependencies"
-    ./executors/php53.sh
+    echo "--> Install dependencies executor/php53.sh"
+    ./executor/php53.sh
 
     echo "--> Apply fix of timezone Europe/Kiev by default"
     sed -i 's+;date.timezone =+date.timezone = 'Europe/Kiev' +g' /etc/php.ini

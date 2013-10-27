@@ -15,7 +15,4 @@ echo "-> Install"
     service httpd start
     chmod -R 777 /var/www/html
 
-echo "-> Run"
-    /etc/init.d/httpd start
-
 echo "-> Success"

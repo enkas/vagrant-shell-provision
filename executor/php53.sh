@@ -5,7 +5,7 @@ echo "Install PHP5.3"
 echo "-> Prepare"
     if [[ $(which php) == */php ]]; then
         echo "PHP already installed"
-        return 0
+        exit 0
     fi
     cd /tmp
 

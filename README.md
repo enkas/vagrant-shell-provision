@@ -22,6 +22,9 @@ Package Box
     vagrant package --base web-box_default_1382634695 --output centos-6.4-web.box
     vagrant box add centos-6.4-web-box centos-6.4-web.box
 
+Resources
+
+* [ssh](http://vds-admin.ru/unix-toolbox/ssh-scp)
 
 
 

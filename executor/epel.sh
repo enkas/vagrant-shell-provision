@@ -2,18 +2,20 @@
 
 echo "Install EPEL Repository"
 
+# http://blog.famillecollet.com/pages/Config-en
+
 echo "-> Prepare"
     if [[ $(yum repolist) == *epel* ]]; then
         echo "EPEL Repository already installed"
-        return 0
+        exit 0
     fi
     cd /tmp
+    yum update
 
 echo "-> Install"
 
     # Import Key
-    wget --no-check-certificate https://fedoraproject.org/static/0608B895.txt
-    mv -v 0608B895.txt /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+    wget --no-check-certificate https://fedoraproject.org/static/0608B895.txt -O /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
     rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
 
     # Add Repository

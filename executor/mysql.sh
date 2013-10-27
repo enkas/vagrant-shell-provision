@@ -5,7 +5,7 @@ echo "Install MySql"
 echo "-> Prepare"
     if [[ $(which mysql) == */mysql ]]; then
         echo "MySql already installed"
-        return 0
+        exit 0
     fi
     cd /tmp
 

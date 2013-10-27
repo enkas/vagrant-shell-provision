@@ -5,7 +5,7 @@ echo "Install Composer Package manager"
 echo "-> Prepare"
     if [[ $(which composer) == */composer ]]; then
         echo "Composer already installed"
-        return 0
+        exit 0
     fi
     cd /tmp
 

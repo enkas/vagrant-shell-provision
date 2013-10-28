@@ -8,7 +8,8 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
-  config.vm.provision "shell", path: "./executor/gitlab-certs.sh"
+# gitlab-certs executor for personal usage only
+#  config.vm.provision "shell", path: "./executor/gitlab-certs.sh"
   config.vm.provision "shell", path: "./executor/epel.sh"
   config.vm.provision "shell", path: "./executor/dev-tools.sh"
   config.vm.provision "shell", path: "./executor/php53.sh"

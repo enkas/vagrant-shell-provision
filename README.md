@@ -32,3 +32,9 @@ Package Box
 Resources
 
 * [ssh](http://vds-admin.ru/unix-toolbox/ssh-scp)
+
+TODO
+----
+
+* httpd service does not start after VM reload
+

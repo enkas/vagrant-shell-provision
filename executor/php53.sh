@@ -15,4 +15,8 @@ echo "-> Install"
         yum install -y -q $PACKAGE
     done
 
+    echo "--> Configure xdebug"
+    echo "xdebug.remote_enable=1" >> /etc/php.d/xdebug.ini
+    echo "xdebug.remote_connect_back=1" >> /etc/php.d/xdebug.ini
+
 echo "-> Success"

@@ -1,40 +1,12 @@
-Image, based on "VirtualBox" for web projects
-==============================================
+Vagrant integration for Magento Projects, based on Cent OS
+=========================================================
 
 Installation
 ------------
-
-1. Install [Ruby](http://www.ruby-lang.org)
-2. Install [Vagrant](http://vagrantup.com)
-3. Install [VirtualBox](http://virtualbox.org)
 
 Usage
 -----
 
     vagrant up
 
-Package Box
------------
-
-1. Get the name of the virtual machine in the VirtualBox
-2. Fix issue wit networking before package [issue](https://github.com/mitchellh/vagrant/issues/1777)
- 
-    ```bash
-    rm /etc/udev/rules.d/70-persistent-net.rules
-    ```
-3. Package Virtual machine as VBox
- 
-    ```bash
-    vagrant package --base web-box_default_1382634695 --output centos-6.4-web.box
-    vagrant box add centos-6.4-web-box centos-6.4-web.box
-    ```
-
-Resources
-
-* [ssh](http://vds-admin.ru/unix-toolbox/ssh-scp)
-
-TODO
-----
-
-* httpd service does not start after VM reload
 

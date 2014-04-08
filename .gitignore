@@ -1,4 +1,1 @@
-.idea
-.vagrant
-/certs/id*
-
+/.idea/*

@@ -12,7 +12,15 @@ echo "-> Prepare"
 echo "-> Install"
     yum install -y -q httpd
     chkconfig httpd on
+
+    # Set UID GUID
+    usermod -u 123 apache
+    groupmod -g 123 apache
+
     service httpd start
-    chmod -R 777 /var/www/html
+
+    # Turn off iptables to fix the problem with apache (?)
+    chkconfig ip6tables off
+    chkconfig iptables off
 
 echo "-> Success"

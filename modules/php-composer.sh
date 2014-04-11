@@ -1,24 +1,17 @@
 #!/bin/bash
 
-echo "Install Composer Package manager"
+echo "Install Magento CLI"
 
 echo "-> Prepare"
-    if [[ $(which composer) == */composer ]]; then
-        echo "Composer already installed"
+    if [[ $(which magerun) == */magerun ]]; then
+        echo "Mage CLI already installed"
         exit 0
     fi
     cd /tmp
 
-    echo "--> Install dependencies executor/php53.sh"
-    ./executor/php53.sh
-
-    echo "--> Apply fix of timezone Europe/Kiev by default"
-    sed -i 's+;date.timezone =+date.timezone = 'Europe/Kiev' +g' /etc/php.ini
-
 echo "-> Install"
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin
-    mv -v /usr/bin/composer.phar /usr/bin/composer
-    composer config --global repositories.speroteck composer http://composer.speroteck.com/
-    composer config --global repositories.firegento composer http://packages.firegento.com/
+    curl -o n98-magerun.phar https://raw.github.com/netz98/n98-magerun/master/n98-magerun.phar
+    chmod +x ./n98-magerun.phar
+    sudo mv ./n98-magerun.phar /usr/local/bin/magerun
 
 echo "-> Success"

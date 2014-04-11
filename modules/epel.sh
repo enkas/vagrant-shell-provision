@@ -14,6 +14,7 @@ echo "-> Prepare"
 
 echo "-> Install"
 
+    yum install wget -y
     # Import Key
     wget --no-check-certificate https://fedoraproject.org/static/0608B895.txt -O /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
     rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6

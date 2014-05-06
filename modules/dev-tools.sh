@@ -9,7 +9,7 @@ echo "-> Prepare"
 
 echo "-> Install"
 
-    for PACKAGE in unzip vim-enhanced atop mc git linx; do
+    for PACKAGE in unzip vim-enhanced atop mc git links; do
         echo "--> Install package "$PACKAGE
         yum install -y -q $PACKAGE
     done

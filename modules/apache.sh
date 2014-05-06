@@ -5,6 +5,7 @@ echo "-> Install apache"
 echo "-> Prepare"
     if [[ $(which httpd) == */httpd ]]; then
         echo "Apache already installed"
+        service httpd start
         exit 0
     fi
     cd /tmp

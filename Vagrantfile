@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "vagrant-centos-6.4-x86_64-minimal"
-  config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130731.box"
+  config.vm.box = "vagrant-centos-6.4-x86_64-minimal-test"
+  config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-i386-v20130731.box"
 
   config.vm.hostname = "magento-demo.dev"
 
@@ -9,7 +9,8 @@ Vagrant.configure("2") do |config|
     override.vm.box_url = "https://dl.dropbox.com/u/5721940/vagrant-boxes/vagrant-centos-6.4-x86_64-vmware_fusion.box"
   end
   config.vm.provider :virtualbox do |virtualbox, override|
-    override.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130731.box"
+    override.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-i386-v20130731.box"
+    vb.gui = true
   end
 
   config.vm.synced_folder "./", "/var/www/html/", :mount_options => ["uid=500","gid=48","dmode=0775","fmode=0764"]

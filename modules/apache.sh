@@ -3,15 +3,15 @@
 echo "-> Install apache"
 
 echo "-> Prepare"
-    if [[ $(which httpd) == */httpd ]]; then
+    if [[ $(which httpd) == */httpd ]];
+    then
         echo "Apache already installed"
-        service httpd start
-        exit 0
+    else
+        cd /tmp
+        echo "-> Install"
+        yum install -y -q httpd
     fi
-    cd /tmp
 
-echo "-> Install"
-    yum install -y -q httpd
     chkconfig httpd on
 
     # Set UID GUID

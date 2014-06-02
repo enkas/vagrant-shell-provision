@@ -1,14 +1,11 @@
 {
     "name": "speroteck/magento-vagrant-integration",
-    "type": "magento-module",
+    "type": "library",
     "description": "Vagrant VM based on Cent OS",
     "authors": [
         {
             "name": "Volodymyr Dubyna",
             "email": "vdubyna@speroteck.com"
         }
-    ],
-    "require": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+    ]
 }

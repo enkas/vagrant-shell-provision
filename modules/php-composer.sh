@@ -1,17 +1,19 @@
 #!/bin/bash
 
-echo "Install Magento CLI"
+echo "Install Composer Package manager"
 
 echo "-> Prepare"
-    if [[ $(which magerun) == */magerun ]]; then
-        echo "Mage CLI already installed"
+    if [[ $(which composer) == */composer ]]; then
+        echo "Composer already installed"
         exit 0
     fi
     cd /tmp
 
 echo "-> Install"
-    wget https://raw.github.com/netz98/n98-magerun/master/n98-magerun.phar
-    chmod +x ./n98-magerun.phar
-    sudo mv ./n98-magerun.phar /usr/bin/magerun
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin
+    mv -v /usr/bin/composer.phar /usr/bin/composer
+    composer config --global repositories.speroteck composer http://composer.speroteck.com/
+    composer config --global repositories.firegento composer http://packages.firegento.com/
+    composer config -g process-timeout 3600
 
 echo "-> Success"

@@ -29,6 +29,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/dev-tools.sh"
   config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/php53.sh"
   config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/php-composer.sh"
+  config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/php-codesniffer.sh"
   config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/apache.sh"
   config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/mysql.sh"
   config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/magento-cli.sh"

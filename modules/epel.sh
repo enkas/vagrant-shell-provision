@@ -10,7 +10,7 @@ echo "-> Prepare"
         exit 0
     fi
     cd /tmp
-    yum update
+    yum -y update
 
 echo "-> Install"
 

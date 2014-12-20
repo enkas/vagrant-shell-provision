@@ -14,8 +14,8 @@ echo "-> PREPARE"
 
 echo "-> START"
 
-    wget -q http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
-    rpm -Uvh epel-release-7-5.noarch.rpm
-    rm epel-release-7-5.noarch.rpm
+    wget -q http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+    rpm -Uvh epel-release-6-8.noarch.rpm
+    rm epel-release-6-8.noarch.rpm
 
 echo "-> FINISH"

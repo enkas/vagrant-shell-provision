@@ -11,7 +11,6 @@ echo "-> PREPARE"
 
 echo "-> START"
 
-    echo "--> Launch Gearman queue manager as daemon"
-    gearmand -d
+    yum install -y gearmand
 
 echo "-> FINISH"

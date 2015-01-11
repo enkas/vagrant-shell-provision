@@ -16,6 +16,6 @@ echo "-> START"
     yum install -y -q mariadb-server mariadb
 
     systemctl enable mariadb.service
-    service mysqld start
+    systemctl start mariadb.service
 
 echo "-> FINISH"

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# http://www.cyberciti.biz/faq/howto-install-linux-apache-mariadb-php-lamp-stack-on-centos7-rhel7/
+
 echo "NAME: Install apache"
 
 echo "-> PREPARE"
@@ -12,8 +14,8 @@ echo "-> START"
 
     yum install -y -q httpd
     echo "--> Turn apache on"
-    chkconfig httpd on
+    systemctl enable httpd.service
     echo "--> Start apache webserver"
-    service httpd start
+    systemctl start httpd.service
 
 echo "-> FINISH"

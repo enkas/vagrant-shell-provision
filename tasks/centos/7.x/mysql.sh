@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# http://www.cyberciti.biz/faq/howto-install-linux-apache-mariadb-php-lamp-stack-on-centos7-rhel7/
+
 echo "NAME: Install MySql"
 
 echo "-> PREPARE"
@@ -11,10 +13,9 @@ echo "-> PREPARE"
 
 echo "-> START"
 
-    yum -y -q install mysql
-    yum -y -q install mysql-server
+    yum install -y -q mariadb-server mariadb
 
-    chkconfig mysqld on
+    systemctl enable mariadb.service
     service mysqld start
 
 echo "-> FINISH"

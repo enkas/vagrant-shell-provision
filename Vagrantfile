@@ -9,9 +9,9 @@ Vagrant.configure("2") do |config|
   # config.vm.hostname = "magento-demo-ce.dev"
 
   # Set source URL for different providers
-  config.vm.provider :vmware_fusion do |vmware, override|
-    override.vm.box_url = "https://dl.dropbox.com/u/5721940/vagrant-boxes/vagrant-centos-6.4-x86_64-vmware_fusion.box"
-  end
+  # config.vm.provider :vmware_fusion do |vmware, override|
+  #   override.vm.box_url = "https://dl.dropbox.com/u/5721940/vagrant-boxes/vagrant-centos-6.4-x86_64-vmware_fusion.box"
+  # end
   config.vm.provider :virtualbox do |virtualbox, override|
     override.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130731.box"
   end
@@ -33,6 +33,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/apache.sh"
   config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/mysql.sh"
   config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/magento-cli.sh"
+
 #  config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/configure-demo-magento-ee.sh"
 #  config.vm.provision "shell", path: "./vendor/speroteck/magento-vagrant-integration/modules/configure-demo-magento-ce.sh"
 

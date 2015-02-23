@@ -1,11 +1,16 @@
 {
-    "name": "vdubyna/vagrant-shell-provision",
-    "type": "library",
-    "description": "Shell scripts to install and configure Cent OS",
-    "authors": [
-        {
-            "name": "Volodymyr Dubyna",
-            "email": "vdubyna@speroteck.com"
-        }
-    ]
+  "name": "enkas/vagrant-shell-provision",
+  "type": "library",
+  "description": "Shell scripts to install and configure Cent OS",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Volodymyr Dubyna",
+      "email": "vdubyna@speroteck.com"
+    },
+    {
+      "name": "Nicolae V. Cristea",
+      "email": "contact@cristea.me"
+    }
+  ]
 }

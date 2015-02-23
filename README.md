@@ -1,4 +1,4 @@
-Vagrant integration for Magento Projects, based on Cent OS
+Vagrant integration for Web Projects, based on Cent OS 6
 =========================================================
 
 Installation
